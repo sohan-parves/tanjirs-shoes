@@ -1,1 +1,0 @@
-# tanjirs-shoes
