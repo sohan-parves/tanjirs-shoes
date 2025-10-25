@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Great+Vibes&family=Judson:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS/common.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="Responsive/responsive-style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="IMG/logo-1.png" />
+    <title>Tanjir's Shop</title>
+  </head>
+  <body>
+    <!--Navigation Bar-->
+    <header>
+      <nav>
+        <div class="container">
+          <div class="first-col">
+            <a href="#" class="link-tag">
+              <img src="IMG/logo.png" alt="Tanjir's Shop" />
+              <p>Tanjir's Shoes</p>
+            </a>
+          </div>
+          <div>
+            <ul class="nav-ul mid-menu" id="menu">
+              <li>
+                <a href="#" class="active link-tag"
+                  ><i class="fa-solid fa-house"></i> Home</a
+                >
+              </li>
+              <li>
+                <a href="HTML/shop.html" class="link-tag"
+                  ><i class="fa-solid fa-shop"></i> Shop</a
+                >
+              </li>
+              <li>
+                <a href="#" class="link-tag"
+                  ><i class="fa-regular fa-circle-question"></i> About</a
+                >
+              </li>
+              <li>
+                <a href="#" class="link-tag"
+                  ><i class="fa-solid fa-headset"></i> Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul class="nav-ul last-menu">
+              <li class="User">
+                <a href="#"><i class="fa-solid fa-circle-user"></i></a>
+              </li>
+              <li class="Cart" class="cart">
+                <a class="cart-icon cart-dropdown" id="cartToggle">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <span id="cartCount" class="badge" aria-live="polite">0</span>
+
+                  <!-- Cart Section -->
+                  <div id="cartSection" class="cart-section">
+                    <h2>Your Cart</h2>
+                    <ul id="cartList"></ul>
+                    <div id="cartSection">
+                      <ul id="cartList"></ul>
+                      <p id="cartTotal">Total: ₹0</p>
+                    </div>
+                    <button id="clearCartBtn" class="clear-btn">Clear Cart</button>
+                    <button id="buyNow" class="buy-btn">Buy Now</button>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <button class="toggleMenu" id="toggleMenu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+      <div class="discount">
+        <p>Get 15% off on your first order</p>
+      </div>
+    </header>
+
+    <!-- Banner containt -->
+    <section id="banner">
+      <h1>
+        Genuine Leather item products <br />
+        & <br />
+        Genuine Footwear.
+      </h1>
+      <p>
+        Discover timeless fashion for Men, Women, and Kids – crafted for <br />
+        comfort, designed for confidence.
+      </p>
+      <a href="HTML/shop.html#shop">
+        <button type="button" class="btn btn-banner">
+          Explore the collection
+        </button>
+      </a>
+    </section>
+
+    <!-- New Arrivals -->
+    <section id="new-arrivals">
+      <div class="header-new-arrivals">
+        <div class="first-header-new-arrivals">
+          <h2>New Arrivals</h2>
+          <p>
+            Be the first to wear this season’s latest looks. Handpicked and
+            freshly styled.
+          </p>
+        </div>
+        <a href="HTML/shop.html#shop" class="link-tag"
+          ><button class="btn btn-header-new-arrivals">
+            SEE WHAT'S NEW
+          </button></a
+        >
+      </div>
+      <ul id="arrivals-list" class="arrivals-grid"></ul>
+    </section>
+
+    <!-- Categories -->
+    <section id="catagories">
+      <h2>Our Categories</h2>
+      <p>
+        Explore a wide range of styles, handpicked to suit every taste and need.
+      </p>
+      <div class="catagories-contain">
+        <div class="wear">
+          <a href="HTML/shop.html?gender=Male#shop" class="link-tag">
+            <img src="IMG/image.png" alt="" />
+            <div class="wear-box">
+              <h3>Men's Wear</h3>
+              <a class="shop-btn">Shop Now</a>
+            </div>
+          </a>
+        </div>
+        <div class="wear">
+          <a href="HTML/shop.html?gender=Female#shop" class="link-tag">
+            <img src="IMG/image copy.png" alt="" />
+            <div class="wear-box">
+              <h3>Women's Wear</h3>
+              <a class="shop-btn">Shop Now</a>
+            </div>
+          </a>
+        </div>
+        <div class="wear">
+          <a href="HTML/shop.html?gender=Kids#shop" class="link-tag">
+            <img src="IMG/image copy 2.png" alt="" />
+            <div class="wear-box">
+              <h3>Kid's Wear</h3>
+              <a class="shop-btn">Shop Now</a>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bestsellers -->
+    <section id="bestsellers">
+      <div class="header-new-arrivals">
+        <div class="first-header-new-arrivals">
+          <h2>Bestsellers</h2>
+          <p>
+            From cult-favorite jackets to must-have dresses – These are our
+            customer faves.
+          </p>
+        </div>
+      </div>
+      <div class="card-footer-new-arrivals-last">
+        <ul id="bestsellers-list" class="bestsellers-list"></ul>
+      </div>
+    </section>
+
+    <!-- Countdown -->
+    <section id="countdown">
+      <h2>Hurry Up! Get Up to 50% Off</h2>
+      <p>Step into summer with sun-ready styles at can't-miss prices.</p>
+      <div id="countdown-timer" class="">
+        <!-- Days Box -->
+        <div class="countdown-timer-box">
+          <span id="days" class="">00</span>
+          <span class="">Days</span>
+        </div>
+
+        <!-- Hours Box -->
+        <div class="countdown-timer-box">
+          <span id="hours" class="">00</span>
+          <span class="">Hours</span>
+        </div>
+
+        <!-- Mins Box -->
+        <div class="countdown-timer-box">
+          <span id="minutes" class="">00</span>
+          <span class="">Min</span>
+        </div>
+
+        <!-- Secs Box -->
+        <div class="countdown-timer-box">
+          <span id="seconds" class="br">00</span>
+          <span class="">Sec</span>
+        </div>
+      </div>
+      <button type="button" class="btn btn-countdown">
+        Shop This Summer Sell
+      </button>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="first-section">
+        <div class="col-footer">
+          <a href="#" class="link-tag">
+            <img src="../IMG/logo.png" alt="Tanjir's Shop" />
+            <p>Tanjir's Shoes</p>
+          </a>
+          <h4>Classic looks for Men, Women & Kids.</h4>
+          <div class="icon-footer">
+            <a href="#" class="link-tag">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" class="link-tag">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" class="link-tag">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#" class="link-tag">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="link-tag">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-footer">
+          <a href="" class="link-tag">
+            <h3>Quick Links</h3>
+          </a>
+          <a href="index.html" class="active link-tag">Home</a>
+          <a href="HTML/shop.html" class="link-tag">Shop</a>
+          <a href="HTML/about.html" class="link-tag">About</a>
+          <a href="HTML/contact.html" class="link-tag">Contact</a>
+        </div>
+        <div class="col-footer">
+          <a href="" class="link-tag">
+            <h3>Shop</h3>
+          </a>
+          <a href="HTML/shop.html?gender=Male#shop" class="link-tag"
+            >Mens Wear</a
+          >
+          <a href="HTML/shop.html?gender=Female#shop" class="link-tag"
+            >Women's Wear</a
+          >
+          <a href="HTML/shop.html?gender=Kids#shop" class="link-tag"
+            >Kid's Wear</a
+          >
+        </div>
+        <div class="col-footer">
+          <a href="" class="link-tag">
+            <h3>Help</h3>
+          </a>
+          <a href="" class="link-tag">FAQ's</a>
+          <a href="" class="link-tag">Return Policy</a>
+          <a href="" class="link-tag">Order Status</a>
+          <a href="" class="link-tag">Shipping & Delivery</a>
+        </div>
+        <div class="col-footer">
+          <a href="" class="link-tag">
+            <h3>My Profile</h3>
+          </a>
+          <a href="" class="link-tag">My Account</a>
+          <a href="" class="link-tag">Track Order</a>
+          <a href="" class="link-tag">My Cart</a>
+          <a href="" class="link-tag">Order History</a>
+        </div>
+      </div>
+      <hr />
+      <div class="second-section">
+        <p>Copyright © 2025 Clothing Store All rights reserved</p>
+        <div class="atm-card"></div>
+      </div>
+    </footer>
+
+    <script type="module" src="JS/main.js"></script>
+    <!-- cart section -->
+    <script type="module">
+      import { initCart, addToCart } from "../JS/cart.js"; // adjust path
+      initCart();
+
+      // Example: wire product cards on this page (if any)
+      document.querySelectorAll("[data-add-to-cart]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const product = {
+            id: btn.dataset.id,
+            name: btn.dataset.name,
+            price: btn.dataset.price,
+            img: btn.dataset.img,
+          };
+          addToCart(product);
+        });
+      });
+    </script>
+  </body>
+</html>

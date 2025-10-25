@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Great+Vibes&family=Judson:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../CSS/common.css" />
+    <link rel="stylesheet" href="../CSS/shop.css" />
+    <link rel="stylesheet" href="../Responsive/responsive-shop.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../IMG/logo-1.png" />
+    <title>Tanjir's Shop</title>
+  </head>
+  <body>
+    <!--Navigation Bar-->
+    <header>
+      <nav>
+        <div class="container">
+          <div class="first-col">
+            <a href="#" class="link-tag">
+              <img src="../IMG/logo.png" alt="Tanjir's Shop" />
+              <p>Tanjir's Shoes</p>
+            </a>
+          </div>
+          <div>
+            <ul class="nav-ul mid-menu" id="menu">
+              <li>
+                <a href="../index.html" class="link-tag"
+                  ><i class="fa-solid fa-house"></i> Home</a
+                >
+              </li>
+              <li>
+                <a href="shop.html" class="active link-tag"
+                  ><i class="fa-solid fa-shop"></i> Shop</a
+                >
+              </li>
+              <li>
+                <a href="../HTML/about.html" class="link-tag"
+                  ><i class="fa-regular fa-circle-question"></i> About</a
+                >
+              </li>
+              <li>
+                <a href="../HTML/contact.html" class="link-tag"
+                  ><i class="fa-solid fa-headset"></i> Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul class="nav-ul last-menu">
+              <li class="User">
+                <a href="#"><i class="fa-solid fa-circle-user"></i></a>
+              </li>
+              <li class="Cart" class="cart">
+                <a class="cart-icon cart-dropdown" id="cartToggle">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <span id="cartCount" class="badge" aria-live="polite">0</span>
+
+                  <!-- Cart Section -->
+                  <div id="cartSection" class="cart-section">
+                    <h2>Your Cart</h2>
+                    <ul id="cartList"></ul>
+                    <div id="cartSection">
+                      <ul id="cartList"></ul>
+                      <p id="cartTotal">Total: ₹0</p>
+                    </div>
+                    <button id="clearCartBtn" class="clear-btn">
+                      Clear Cart
+                    </button>
+                    <button id="buyNow" class="buy-btn">
+                      Buy Now
+                    </button>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <button class="toggleMenu" id="toggleMenu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+      <div class="discount">
+        <p>Get 15% off on your first order</p>
+      </div>
+    </header>
+
+    <!-- Shop -->
+    <section id="shop">
+      <div class="first-row">
+        <h1>Shop</h1>
+        <hr />
+        <div class="first-row-div">
+          <p class="page-info-top" id="pageInfo_top"></p>
+          <select id="genderFilter" class="option">
+            <option value="All" selected>All</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Kids">Kids</option>
+          </select>
+          <select id="option">
+            <option value="latest" selected>Sort By Latest</option>
+            <option value="low-high">Sort By Price: Low to High</option>
+            <option value="high-low">Sort By Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+      <div class="last-row">
+        <ul id="product-list"></ul>
+      </div>
+
+      <!-- Product Popup -->
+      <div id="productPopup" class="popup">
+        <div class="popup-content">
+          <span class="close-btn">&times;</span>
+
+          <img id="popup-img" src="" alt="Product Image" />
+          <h3 id="popup-name"></h3>
+          <p id="popup-gender"></p>
+          <p id="popup-price"></p>
+          <p id="popup-desc"></p>
+
+          <div class="popup-btns">
+            <button id="addCartBtn" class="btn-cart">Add to Cart</button>
+            <button id="buyNowBtn" class="btn-buy">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Button -->
+      <div class="next-item">
+        <button type="button" id="prevPage" class="btn btn-items">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <span id="pageInfo"></span>
+        <button type="button" class="btn btn-items" id="nextPage">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="first-section">
+        <div class="col-footer">
+          <a href="#" class="link-tag">
+            <img src="../IMG/logo.png" alt="Tanjir's Shop" />
+            <p>Tanjir's Shoes</p>
+          </a>
+          <h4>Classic looks for Men, Women & Kids.</h4>
+          <div class="icon-footer">
+            <a href="#" class="link-tag">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" class="link-tag">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" class="link-tag">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#" class="link-tag">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="link-tag">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-footer">
+          <a href="" class="link-tag">
+            <h3>Quick Links</h3>
+          </a>
+          <a href="../index.html" class="link-tag">Home</a>
+          <a href="shop.html" class="active link-tag">Shop</a>
+          <a href="about.html" class="link-tag">About</a>
+          <a href="contact.html" class="link-tag">Contact</a>
+        </div>
+        <div class="col-footer">
+          <a href="" class="link-tag">
+            <h3>Shop</h3>
+          </a>
+          <a href="./shop.html?gender=Male#shop" class="link-tag"
+            >Mens Wear</a
+          >
+          <a href="./shop.html?gender=Female#shop" class="link-tag"
+            >Women's Wear</a
+          >
+          <a href="./shop.html?gender=Kids#shop" class="link-tag"
+            >Kid's Wear</a
+          >
+        </div>
+        <div class="col-footer">
+          <a href="" class="link-tag">
+            <h3>Help</h3>
+          </a>
+          <a href="" class="link-tag">FAQ's</a>
+          <a href="" class="link-tag">Return Policy</a>
+          <a href="" class="link-tag">Order Status</a>
+          <a href="" class="link-tag">Shipping & Delivery</a>
+        </div>
+        <div class="col-footer">
+          <a href="" class="link-tag">
+            <h3>My Profile</h3>
+          </a>
+          <a href="" class="link-tag">My Account</a>
+          <a href="" class="link-tag">Track Order</a>
+          <a href="" class="link-tag">My Cart</a>
+          <a href="" class="link-tag">Order History</a>
+        </div>
+      </div>
+      <hr />
+      <div class="second-section">
+        <p>Copyright © 2025 Clothing Store All rights reserved</p>
+        <div class="atm-card"></div>
+      </div>
+    </footer>
+
+    <script type="module" src="../JS/shop.js"></script>
+    <script type="module">
+      import { initCart, addToCart } from "../JS/cart.js"; // adjust path
+      initCart();
+
+      // Example: wire product cards on this page (if any)
+      document.querySelectorAll("[data-add-to-cart]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const product = {
+            id: btn.dataset.id,
+            name: btn.dataset.name,
+            price: btn.dataset.price,
+            img: btn.dataset.img,
+          };
+          addToCart(product);
+        });
+      });
+    </script>
+  </body>
+</html>
